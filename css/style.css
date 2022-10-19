@@ -1,0 +1,274 @@
+body {
+	font-family: 'Lato';
+	line-height: 160%;
+	color: #424551;
+}
+
+[class*="__container"]{
+	max-width: 1230px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+	padding: 50px;
+}
+
+.header {
+	font-weight: 900;
+	font-size: 25px;
+	color: #fff;
+	padding: 30px;
+	text-align: center;
+	background-image: linear-gradient(
+  45deg,
+  hsl(240deg 100% 20%) 0%,
+  hsl(289deg 100% 21%) 11%,
+  hsl(315deg 100% 27%) 22%,
+  hsl(329deg 100% 36%) 33%,
+  hsl(337deg 100% 43%) 44%,
+  hsl(357deg 91% 59%) 56%,
+  hsl(17deg 100% 59%) 67%,
+  hsl(34deg 100% 53%) 78%,
+  hsl(45deg 100% 50%) 89%,
+  hsl(55deg 100% 50%) 100%
+	);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 90;
+	width: 100%;
+}
+
+.header__container {
+	max-width: 700px;
+	margin: 0 auto;
+}
+.menu {
+	font-size: 0;
+}
+
+.menu__sub-menu li{
+	position: relative;
+	padding-left: 10px;
+}
+
+.menu__sub-menu li::before {
+	content: '';
+	background: url('../img/checkbox.png') 0 0 ;
+	position: absolute;
+	width: 16px;
+	min-height: 16px;
+	left: 0;
+	top: 4px;
+}
+
+.menu__item {
+	position: relative;
+	display: inline-block;
+}
+
+.menu__item:not(:last-child){
+	margin-right: 25px;
+}
+
+.menu__item:hover .sub-menu{
+	opacity: 1;
+	visibility: visible;
+	top: 100%;
+}
+
+.menu__link {
+	font-size: 16px;
+	color: #fff;
+	display: inline-block;
+	padding: 5px 0px;
+}
+
+.sub-menu {
+	background-color: rgba(192, 20, 109, 0.893);
+	padding: 15px;
+	position: absolute;
+	min-width: 208px;
+	top: 130%;
+	left: 0;
+	opacity: 0;
+	border-radius: 20%;
+	visibility: hidden;
+	transition: all 0.3s ease 0s;
+}
+
+.sub-menu__item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.sub-menu__link {
+	font-size: 16px;
+	color: #fff;
+}
+
+.car {
+	margin-top: 85px;
+	min-height: 1000px;
+	background: url('../img/bg.jpg') 0 0/cover no-repeat;
+	margin-bottom: 40px;
+}
+
+.car__left {
+
+}
+
+.car__wrapper {
+	position: relative;
+	
+}
+
+.car__image {
+	position: absolute;
+	top: 599px;
+	left: 624px;
+	z-index: 1;
+}
+
+.car__shadow {
+	background: #424551;
+	position: absolute;
+	width: 447px;
+	height: 50px;
+	border-radius: 50%;
+	opacity: 0.5;
+	top: 755px;
+	left: 659px;
+}
+
+.car__people1 {
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	top: 606px;
+   left: 966px;
+	z-index: 3;
+}
+
+.car__people2 {
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	top: 703px;
+	left: 217px;
+}
+
+.car__people3 {
+	width: 157px;
+	height: 228px;
+	position: absolute;
+	top: 410px;
+	left: 323px;
+}
+
+.car__dog {
+	width: 83px;
+	height: 64px;
+	position: absolute;
+	top: 558px;
+   left: 325px;
+}
+.car__wheels {
+	position: absolute;
+	left: 627px;
+   top: 723px;
+	transform: rotateX(-50%);
+	z-index: 2;
+}
+
+.car__wheels img{
+	width: 60px;
+	height: 60px;
+	animation: car__wheels 2s linear infinite;
+}
+.wheel1 {
+	position: absolute;
+	left: 63px;
+}
+
+.wheel2 {
+	position: absolute;
+	left: 356px;
+}
+
+@keyframes car__wheels{
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+.block-relative {
+	max-width: 800px;
+	min-height: 200px;
+	margin: 0 auto;
+	border: 2px solid #1B2021;
+	border-radius: 20px;
+	margin-bottom: 40px;
+}
+
+.block-relative div {
+	border-radius: 20px;
+	font-size: 35px;
+	text-align: center;
+	line-height: 50px;
+}
+.block-relative__1 {
+	background-color: #A6A867;
+	position: relative;
+	opacity: 0.7;
+	z-index: 2;
+}
+.block-relative__2 {
+	color: #fff;
+	background-color: #51513D;
+	position: relative;
+	bottom: 10px;
+	right: 20px;
+}
+.block-relative__3 {
+	background-color: #E3DC95;
+}
+
+.block-absolute {
+	max-width: 800px;
+	min-height: 200px;
+	margin: 0 auto;
+	border: 2px solid #7BC950;
+	border-radius: 20px;
+	position: relative;
+}
+
+.block-absolute div {
+	border-radius: 20px;
+	font-size: 35px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.block-absolute__1 {
+	background-color: #7CE577;
+	position: absolute;
+	width: 50%;
+	bottom: 20px;
+	right: 10px;
+}
+.block-absolute__2 {
+	background-color: #B6EFD4;
+}
+.block-absolute__3 {
+	background-color: #A0CCDA;
+}
+
+.footer {
+	text-align: center;
+	font-size: 30px;
+	padding: 40px;
+	background: rgb(185, 143, 143);
+}
